@@ -10,7 +10,7 @@ class BirthNumberTest extends TestCase
     /**
      * A basic unit test example.
      */
-    public function test_example(): void
+    public function test_birthNumber(): void
     {
         $this->assertSame(4, Fortune::calcBirthNumber("2000","1","1"));
         $this->assertSame(5, Fortune::calcBirthNumber("2000","1","2"));

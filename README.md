@@ -22,18 +22,31 @@ DB_PASSWORD=パスワードをここへ
 ```
 
 # 開発の流れ
+
+## Laravel のインストール
 composer create-project --prefer-dist laravel/laravel Laravel-fortune "10.*"
 cd Laravel-fortune
+
+## コントローラーの作成
 php artisan make:controller kabbalaController
 
+## バリデーションの日本語化
 composer require askdkc/breezejp --dev
 php artisan breezejp
 
+## DATABASEの用意（マイグレートとシーダーの準備と実行）
 php artisan make:migration create_fortunes_table 
 php artisan migrate
-php artisan make:model Fortune 
 php artisan make:seeder FortuneSeeder
 php artisan db:seed --class=FortuneSeeder
 
+## モデルの生成
+php artisan make:model Fortune 
+
+# ユニットテスト
 php artisan make:test BirthNumberTest --unit
 php artisan test .\tests\Unit\BirthNumberTest.php
+
+## 機能(Feature)テスト
+php artisan make:test FortuneTest
+php artisan test .\tests\Feature\FortuneTest.php 
