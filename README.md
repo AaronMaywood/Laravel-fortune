@@ -20,3 +20,17 @@ DB_DATABASE=academy-php_fortune
 DB_USERNAME=academy-php_fortune
 DB_PASSWORD=パスワードをここへ
 ```
+
+# 開発の流れ
+composer create-project --prefer-dist laravel/laravel Laravel-fortune "10.*"
+cd Laravel-fortune
+php artisan make:controller kabbalaController
+
+composer require askdkc/breezejp --dev
+php artisan breezejp
+
+php artisan make:migration create_fortunes_table 
+php artisan migrate
+php artisan make:model Fortune 
+php artisan make:seeder FortuneSeeder
+php artisan db:seed --class=FortuneSeeder

@@ -54,21 +54,21 @@
 
         <div class="uranai-kekka-innner">
           <div class="kekka"><img src="images/title_img01.png" width="91" height="47" alt=""></div>
-          <h1><img src="images/{{ $fortune[$birthNumber]['image'] }}" width="764" height="825" alt=""></h1>
+          <h1><img src="images/{{ $fortune->image }}" width="764" height="825" alt=""></h1>
           <div id="animation-container"><img src="images/bg_light.png" width="390" height="390" alt=""></div>
         </div><!--uranai-kekka-innner-->
 
         <div class="uranai-text">
           <h2><img src="images/h2_img01.gif" width="349" height="39" alt=""></h2>
           <p class="textLeft">
-            {{ $fortune[$birthNumber]['message1'] }}
+            {{ $fortune->personality }}
           </p>
           <h2><img src="images/h2_img02.png" width="349" height="39" alt=""></h2>
           <p class="textLeft">
-            {!! $fortune[$birthNumber]['message2'] !!}
+            {!! $fortune->fortune !!}
           </p>
           <h2><img src="images/h2_img03.gif" width="349" height="39"></h2>
-          <p class="fSizeLL">{{ $fortune[$birthNumber]['message3'] }}</p>
+          <p class="fSizeLL">{{ $fortune->lucky_items }}</p>
         </div>
       </section>
 
