@@ -34,3 +34,6 @@ php artisan migrate
 php artisan make:model Fortune 
 php artisan make:seeder FortuneSeeder
 php artisan db:seed --class=FortuneSeeder
+
+php artisan make:test BirthNumberTest --unit
+php artisan test .\tests\Unit\BirthNumberTest.php
