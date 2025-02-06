@@ -58,7 +58,7 @@
       <input type="text" name="year" class="form-flam01">
       年</p>
       @if ($errors->get('year'))
-          <ul class="text-sm text-red-600 space-y-1">
+          <ul style="margin:0px 0px 20px;background:red;color:white;padding:10px;display:inline-block;">
               @foreach ((array) $errors->get('year') as $message)
                   <li>{{ $message }}</li>
               @endforeach
