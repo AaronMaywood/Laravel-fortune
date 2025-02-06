@@ -28,7 +28,7 @@ composer create-project --prefer-dist laravel/laravel Laravel-fortune "10.*"
 cd Laravel-fortune
 
 ## コントローラーの作成
-php artisan make:controller kabbalaController
+php artisan make:controller KabbalaController
 
 ## バリデーションの日本語化
 composer require askdkc/breezejp --dev

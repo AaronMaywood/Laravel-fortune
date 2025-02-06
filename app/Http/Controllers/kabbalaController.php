@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Fortune;
 use Illuminate\Http\Request;
 
-class kabbalaController extends Controller
+class KabbalaController extends Controller
 {
     public function result(Request $request){
 
