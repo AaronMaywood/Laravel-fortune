@@ -29,6 +29,9 @@
 <!-- InstanceEndEditable -->
 </head>
 <body>
+@if ($errors->get('year') || $errors->get('month') || $errors->get('day') )
+  <p style="color:white;background:red;text-align:center;padding:16px;">入力エラーがあります。エラーメッセージに従って入力値を見直してください。</p>
+@endif
 
 
 <!--ソーシャルボタン-->
