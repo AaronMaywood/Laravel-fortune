@@ -40,7 +40,7 @@
         <p>{{ $fortune->future_preparation }}</p>
         <h3>ラッキーワード＆ラッキーアイテム</h3>
         <h4>ラッキーワード</h4>
-        <p>{!! nl2br($fortune->luckey_words) !!}</p>
+        <p>{!! $fortune->lucky_words !!}</p>
         <h4>ラッキーアイテム</h4>
         <p>{{ $fortune->lucky_items }}</p>
       <a href="index.html" class="btn-uranau">もう一度占う</a>
