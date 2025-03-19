@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Fortune;
+use App\Models\CareerFortune;
 use Illuminate\Http\Request;
 
 class KabbalaController extends Controller
@@ -20,20 +20,19 @@ class KabbalaController extends Controller
             'day' => ['required', 'numeric', 'digits_between:1,2', 'min:1', 'max:31'],
         ]);
 
-        // Model読み込み
-        $fortunes = Fortune::get();
-
         // 誕生数を計算する
-        $birthNumber = Fortune::calcBirthNumber
+        $birthNumber = CareerFortune::calcBirthNumber
         (
             $request->input('year'),
             $request->input('month'),
             $request->input('day'),
         );
 
-        // 占いの決定
-        $fortune = $fortunes[--$birthNumber];
-
-        return view('result', compact('fortune'));
+$birthNumber = 1;   // TODO: 仮の値
+        
+        // Model読み込み
+        $fortune = CareerFortune::find($birthNumber);
+        
+        return view('result', compact('birthNumber','fortune'));
     }
 }
