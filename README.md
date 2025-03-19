@@ -1,5 +1,15 @@
 # Laravel カバラ占い
 
+GitHub からclone した後のlocalhost(XAMPP) へのインストール方法
+
+※ドキュメントルート(c:\xampp\htdocs\)上でclone すること
+※phpMyAdmin から career_fortunes テーブルがもし存在するなら削除しておく
+
+composer install
+php artisan migrate
+php artisan db:seed
+http://localhost/Laravel-fortune/public/ にアクセス
+
 ## 本番公開時の.env(yasumuraの場合)
 
 ```
